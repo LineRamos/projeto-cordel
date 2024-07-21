@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', 'cursive';
+    --fonte3: 'Sriracha', 'cursive';
+}
+
+* {    
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    text-align: center; 
+    color: white;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* Para que a 1ª letra tenha um tamanho maior do que as outras letras */
+    font-family: var(--fonte2);
+    font-size: 10vw; /* Sem o midia-Query, é uma alternativa. Dessa forma, peço que a fote tenha 10% da largura da tela. Assim, o tamanho da letra aumenta ou reduz, dependendo do tamanho da tela que se tem. */
+}
+
+h1 > p {
+    display: inline; /* Para que as 2 palavras apareçam em sequência e dps eu tentar colocar a 1ª letra grande */
+}
+
+header > p {
+    padding-bottom: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: normal 1em Verdana;
+}
+
+header a, footer a {
+    font: bolder 1em Verdana;
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+} /* Desse jeito é interessante, pq se tiver outros links no coropo do texto, n]ao terá a mesma aparência desses 2. */
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /* Sem o midia-Query, é uma alternativa. Dessa forma, peço que a fote tenha 10% da largura da tela. Assim, o tamanho da letra aumenta ou reduz, dependendo do tamanho da tela que se tem. */
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {    
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover; /* Para que a imagem apareça de um lado ao outro. */
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
